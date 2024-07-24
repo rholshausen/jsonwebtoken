@@ -101,7 +101,7 @@ impl StdError for Error {
             ErrorKind::Base64(err) => Some(err),
             ErrorKind::Json(err) => Some(err.as_ref()),
             ErrorKind::Utf8(err) => Some(err),
-            ErrorKind::Crypto(err) => Some(err),
+            ErrorKind::Crypto(_err) => None,
         }
     }
 }
